@@ -1,0 +1,31 @@
+/* | GENERAL | */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #7284a8;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+#green {
+  color: #244f26;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#red {
+  color: #b33951;
+  padding: 10px;
+}
+
+a {
+  color: black;
+}
