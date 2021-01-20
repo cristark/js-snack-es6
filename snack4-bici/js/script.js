@@ -9,7 +9,7 @@ const listaBici = [
     {
         nome : 'Bianchi',
         modello : 'Methanol',
-        peso : 10000
+        peso : 10341
     },
     {
         nome : 'Cannondale',
@@ -31,13 +31,13 @@ const [bici1, bici2, bici3] = listaBici;
 // Confronto tra pesi delle varie bici per capire quella che ha il peso minore ed assegnazione alla variabile specifica
 if (bici1.peso > bici2.peso) {
     pesoMinore = bici2.peso;
-    console.log(bici2);
+    console.log(`La bici con il peso minore è la ${bici2.nome} ${bici2.modello}, con un peso di ${pesoMinore / 1000} kg`);
 } else if (bici2.peso > bici3.peso) {
     pesoMinore = bici3.peso;
-    console.log(bici3);
+    console.log(`La bici con il peso minore è la ${bici3.nome} ${bici3.modello}, con un peso di ${pesoMinore / 1000} kg`);
 } else if (bici3.peso > bici1.peso) {
     pesoMinore = bici1.peso;
-    console.log(bici1);
+    console.log(`La bici con il peso minore è la ${bici1.nome} ${bici1.modello}, con un peso di ${pesoMinore / 1000} kg`);
 } else {
     console.log('Le bici hanno lo stesso peso');
 }
