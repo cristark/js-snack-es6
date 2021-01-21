@@ -16,7 +16,9 @@ const carBrands = ['Lamborghini', 'Pagani', 'Aston Martin', 'Bugatti', 'Ferrari'
 let min, max;
 let sentinel = true;
 do {
+
     alert(`Inserisci due numeri da 0 a ${carBrands.length - 1}, rispettivamente per il numero minimo e il numero massimo del range da selezionare`);
+
     min = parseInt(prompt('Inserisci il numero di partenza'));
     max = parseInt(prompt('Inserisci il numero di arrivo'));
 
@@ -29,19 +31,15 @@ do {
 } while (sentinel);
 
 console.log(carBrands);
-console.log(min, max);
-
-const range = [];
 
 // Filtro elementi nell'array in base alla posizione e li pusho all'interno del nuovo array in base ai numeri di min e max ricavati in precedenza
-carBrands.filter((e, i) => {
-    if (i >= min && i <= max) {
-        range.push(e);
-        /* return console.log(`${i}: ${e}`); */
-    }
-    return range;
+const range = carBrands.filter((e, i) => {
+    return i >= min && i <= max
 });
 
 console.log(range);
 
-// Testato due versioni, la prima che prevede di stampare su console direttamente la successione di nomi della lista all'interno del range selezionato; la seconda che prevede di pushare gli elementi selezionati nel range all'interno di un altro array
+// Provo forEach per stampare singolarmente in Console tutti gli elementi del range selezionato
+range.forEach((e, i) => {
+    console.log(`${i}: ${e}`);
+});
